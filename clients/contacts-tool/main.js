@@ -15,4 +15,6 @@ function main() {
   ContactsTool.server.preload(ContactsTool.FIXTURES) ;
 
   ContactsTool.getPath('bodyPage.mainPane').append();
+  
+  ContactsTool.goState('a',1);
 } ;

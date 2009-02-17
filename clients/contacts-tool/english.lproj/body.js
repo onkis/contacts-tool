@@ -12,10 +12,9 @@ ContactsTool.bodyPage = SC.Page.create(
   needsDesigner: YES,
   mainPane: SC.MainPane.design({
     childViews: [
-      SC.LabelView.design({
-        layout: {top: 200, left: 200, width: 400, height: 100},
-        value: 'Hello Nurse',
-        styleClass: ['welcome-text']
+      SC.ContainerView.extend({
+        layout: {top: 0, left: 0, bottom: 0, right: 0},
+        nowShowingBinding: 'ContactsTool.mainView'
       })
     ]
   })
