@@ -31,7 +31,7 @@ ContactsTool.contactsPage = SC.Page.create( // SC.Statechart,
         value: 'First Name'
       }),
       SC.TextFieldView.design({
-        layout: {centerX: -39,top: 121,width: 254,height: 31},
+        layout: {centerX: -39,top: 121,width: 254,height: 24},
         valueBinding: 'ContactsTool.detailController.firstName'
       }),
       SC.LabelView.design({
@@ -39,7 +39,7 @@ ContactsTool.contactsPage = SC.Page.create( // SC.Statechart,
         value: 'Last Name'
       }),
       SC.TextFieldView.design({
-        layout: {centerX: -37,top: 189,width: 254,height: 31},
+        layout: {centerX: -37,top: 189,width: 254,height: 24},
         valueBinding: 'ContactsTool.detailController.lastName'
       }),
       SC.ButtonView.design({
@@ -55,6 +55,18 @@ ContactsTool.contactsPage = SC.Page.create( // SC.Statechart,
         action: 'discardChanges',
         isEnabledBinding: 'ContactsTool.detailController.hasChanges',
         title: 'Cancel'
+      }),
+      SC.ButtonView.design({
+        layout: {left: 220,bottom: 20, width: 86,height: 21},
+        target: 'ContactsTool',
+        action: 'loadContacts',
+        title: 'Upload Wizard'
+      }),
+      SC.ButtonView.design({
+        layout: {left: 320,bottom: 20,width: 86,height: 21},
+        target: 'ContactsTool',
+        action: 'logout',
+        title: 'Logout'
       })
     ] 
   })
